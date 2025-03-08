@@ -1,6 +1,7 @@
 package main;
 
 import fmi.Algo.BreadthSearch;
+import fmi.Algo.DepthSerch;
 import fmi.Algo.SearchInterfaces;
 import fmiGraph.Graph;
 import fmiGraph.Node;
@@ -11,7 +12,10 @@ public class Main {
 		
 		Graph g = new Graph();
 		initGraph(g);
-		searchPath("S","E", new BreadthSearch(g));
+		searchPath("Y","A", new DepthSerch(g));
+		System.out.println("--------------------------------------");
+		searchPath("Y","A", new BreadthSearch(g));
+		
 		
 
 	}
@@ -26,6 +30,8 @@ public class Main {
 			
 			System.out.println("There is no path");
 		}
+		
+		
 		
 	}
 	
@@ -47,14 +53,14 @@ public class Main {
 //		graph.createBiderectanalLink("S", "EN");
 //		graph.createBiderectanalLink("E", "PB");
 		
-		graph.createBiderectanalLink("EH", "PB");
-		graph.createBiderectanalLink("ST", "PB");
-		graph.createBiderectanalLink("EH", "BT");
-		graph.createBiderectanalLink("P", "BT");
-		graph.createBiderectanalLink("ST", "BT");
-		graph.createBiderectanalLink("B", "BT");
-		graph.createBiderectanalLink("B", "P");
-		graph.createBiderectanalLink("B", "A");
+//		graph.createBiderectanalLink("EH", "PB");
+//		graph.createBiderectanalLink("ST", "PB");
+//		graph.createBiderectanalLink("EH", "BT");
+//		graph.createBiderectanalLink("P", "BT");
+//		graph.createBiderectanalLink("ST", "BT");
+//		graph.createBiderectanalLink("B", "BT");
+//		graph.createBiderectanalLink("B", "P");
+//		graph.createBiderectanalLink("B", "A");
 		graph.createBiderectanalLink("Y", "A");
 		graph.createBiderectanalLink("ST", "A");
 		graph.createBiderectanalLink("ST", "Y");

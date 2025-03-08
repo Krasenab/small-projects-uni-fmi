@@ -29,6 +29,7 @@ public class BreadthSearch implements SearchInterfaces {
 			System.out.println("Can not start: There are no such nodes in the graph !");
 			return false;
 		}
+		UtilClass.rest(graph);
 		
 		fakeQueue.add(startNode);
 		

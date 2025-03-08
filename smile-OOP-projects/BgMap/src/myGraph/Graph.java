@@ -45,4 +45,12 @@ public class Graph {
 		
 	}
 
+	public Map<String, Node> getInsideMap() {
+		return insideMap;
+	}
+
+
+	
+	
+
 }

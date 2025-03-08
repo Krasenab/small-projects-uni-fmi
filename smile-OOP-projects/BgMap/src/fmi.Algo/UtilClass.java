@@ -1,11 +1,25 @@
 package fmi.Algo;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 import fmiGraph.Graph;
 import fmiGraph.Node;
 
 public class UtilClass {
+	
+	public static void rest(Graph graph) 
+	{
+		Collection<Node> values = graph.getInsideMap().values();
+		
+		for(Node v:values) 
+		{
+			v.setParentName("no parent");
+			v.setVisited(false);
+		}
+	}
+	
+	
 	
 	public static void printPath(Graph graph,String goalName) 
 	{
@@ -25,7 +39,7 @@ public class UtilClass {
 		}
 		for(String name:pathList) 
 		{
-			System.out.println(name + "->");
+			System.out.print(name + "->");
 		}
 		
 		

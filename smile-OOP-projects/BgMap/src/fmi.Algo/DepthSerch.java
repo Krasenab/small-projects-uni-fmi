@@ -55,26 +55,7 @@ public class DepthSerch implements SearchInterfaces {
 		return false;
 	}
 	
-//	private void printPath(String goalName) 
-//	{
-//		ArrayList<String> path = new ArrayList<>();
-//		path.add(goalName);
-//		Node tempNode= graph.getNode(goalName); 
-//		while(true) 
-//		{
-//			if(tempNode.getParentName().equals("no parent")) 
-//			{
-//				break;
-//			}
-//			path.add(0,tempNode.getParentName());
-//			tempNode = graph.getNode(tempNode.getParentName());
-//							
-//		}
-//		for(String name:path) 
-//		{
-//			System.out.println(name + "->");
-//		}
-//	}
+
 	
 	private void addNodesToFakeQueue(List<Node> fakeQueue,Node parent) 
 	{

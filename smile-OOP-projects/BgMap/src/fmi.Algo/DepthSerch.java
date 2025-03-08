@@ -7,12 +7,13 @@ import fmiGraph.Graph;
 import fmiGraph.Link;
 import fmiGraph.Node;
 
-public class BreadthSearch implements SearchInterfaces {
+public class DepthSerch implements SearchInterfaces {
 
+	
 	
 	private Graph graph;
 	
-	public BreadthSearch(Graph gr) 
+	public DepthSerch (Graph gr) 
 	{
 		this.graph = gr;
 	}
@@ -82,10 +83,11 @@ public class BreadthSearch implements SearchInterfaces {
 			if(l.getRelatedNode().isVisited()==false && !fakeQueue.contains(l.getRelatedNode())) 
 			{
 				l.getRelatedNode().setParentName(parent.getName()); 
-				fakeQueue.add(l.getRelatedNode());
+				fakeQueue.add(0,l.getRelatedNode());
 			}
 			//fakeQueue.add(l.getRelatedNode());
 		}
 	}
-
+	
+	
 }

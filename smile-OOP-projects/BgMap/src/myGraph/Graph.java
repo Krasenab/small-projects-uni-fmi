@@ -24,7 +24,7 @@ public class Graph {
 	
 	public void createOneDirectionalLink(String nameOne,String nameTwo) 
 	{
-		if(!insideMap.containsKey(nameTwo) ||!insideMap.containsKey(nameOne)) 
+		if(!insideMap.containsKey(nameTwo) || !insideMap.containsKey(nameOne)) 
 		{
 			System.out.println("There are mp such nodes in the map");
 			return;

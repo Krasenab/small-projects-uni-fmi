@@ -12,18 +12,28 @@ public class Node {
 	private int x;
 	private int y;
 	private int weight;
-	private List<Link> links = new ArrayList<>();
+	private ArrayList<Link> links = new ArrayList<>();
 	
 	private boolean isVisited;
+	private String parentName = "no parent";
 	
-	
+	public String getParentName() {
+		return parentName;
+	}
+
+
+
+	public void setParentName(String parentName) {
+		this.parentName = parentName;
+	}
+
+
+
 	public Node(String name)
 	{
 		super();
 		this.setName(name);
 	}
-	
-	
 	
 	
 
@@ -63,7 +73,7 @@ public class Node {
 		return links;
 	}
 
-	public void setLinks(List<Link> links) {
+	public void setLinks(ArrayList<Link> links) {
 		this.links = links;
 	}
 

@@ -12,6 +12,11 @@ public class Graph {
 		
 	}
 	
+	public Node getNode(String name) 
+	{
+		return insideMap.get(name);
+	}
+	
 	public void addNode(Node node) 
 	{
 		insideMap.put(node.getName(), node);

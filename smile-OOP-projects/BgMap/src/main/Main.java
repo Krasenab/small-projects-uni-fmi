@@ -2,6 +2,7 @@ package main;
 
 import fmi.Algo.BreadthSearch;
 import fmi.Algo.DepthSerch;
+import fmi.Algo.GreedySearchByCordinates;
 import fmi.Algo.GreedySerchByLinkLenght;
 import fmi.Algo.SearchInterfaces;
 import fmiGraph.Graph;
@@ -14,12 +15,13 @@ public class Main {
 		Graph g = new Graph();
 		initGraph(g);
 		System.out.println("-----------Depth Search--------");
-		searchPath("S","A", new DepthSerch(g));
+		//searchPath("S","A", new DepthSerch(g));
 		System.out.println("-----Breadh search----------");
-		searchPath("S","A", new BreadthSearch(g));
+		//searchPath("S","A", new BreadthSearch(g));
 		System.out.println("-------------Greedy search by link---------");
-		searchPath("S","A",new GreedySerchByLinkLenght(g));
-		
+		//searchPath("S","A",new GreedySerchByLinkLenght(g));
+		System.out.println("---------Greedy search by cordinate---------");
+		searchPath("E","P",new GreedySearchByCordinates(g));
 		
 		
 		

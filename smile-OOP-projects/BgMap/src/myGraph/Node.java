@@ -27,6 +27,15 @@ public class Node {
 		this.parentName = parentName;
 	}
 
+     
+
+	public Node(String name, int x, int y) {
+		super();
+		this.name = name;
+		this.x = x;
+		this.y = y;
+	}
+
 
 
 	public Node(String name)

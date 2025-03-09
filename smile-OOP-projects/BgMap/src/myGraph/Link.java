@@ -24,7 +24,11 @@ public class Link {
 		super();
 		this.relatedNode = relatedNode;
 	}
-	
+	public Link(Node relatedNode,int lenght) {
+		super();
+		this.relatedNode = relatedNode;
+		this.lenght = lenght;
+	}
 	
 
 }

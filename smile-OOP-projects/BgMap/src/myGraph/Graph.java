@@ -22,26 +22,26 @@ public class Graph {
 		insideMap.put(node.getName(), node);
 	}
 	
-	public void createOneDirectionalLink(String nameOne,String nameTwo) 
+	public void createOneDirectionalLink(String nameOne,String nameTwo,int lenght) 
 	{
 		if(!insideMap.containsKey(nameTwo) || !insideMap.containsKey(nameOne)) 
 		{
-			System.out.println("There are mp such nodes in the map");
+			System.out.println("There are no such nodes in the map");
 			return;
 		}
 		Node nodeOne = insideMap.get(nameOne);
 		Node nodeTwo = insideMap.get(nameTwo);
 		
 		
-		 nodeOne.getLinks().add(new Link(nodeTwo));
+		 nodeOne.getLinks().add(new Link(nodeTwo,lenght));
 		
 		
 	}
 	
-	public void createBiderectanalLink(String nameOne,String nameTwo) 
+	public void createBiderectanalLink(String nameOne,String nameTwo,int lenght) 
 	{
-		createOneDirectionalLink(nameOne,nameTwo);
-		createOneDirectionalLink(nameTwo,nameOne);
+		createOneDirectionalLink(nameOne,nameTwo,lenght);
+		createOneDirectionalLink(nameTwo,nameOne,lenght);
 		
 	}
 

@@ -11,7 +11,7 @@ public class Node {
 	private String name;
 	private int x;
 	private int y;
-	private int weight;
+	private float weight;
 	private ArrayList<Link> links = new ArrayList<>();
 	
 	private boolean isVisited;
@@ -70,11 +70,11 @@ public class Node {
 		this.y = y;
 	}
 
-	public int getWeight() {
+	public float getWeight() {
 		return weight;
 	}
 
-	public void setWeight(int weight) {
+	public void setWeight(float weight) {
 		this.weight = weight;
 	}
 

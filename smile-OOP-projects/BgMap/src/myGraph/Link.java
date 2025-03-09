@@ -1,6 +1,6 @@
 package fmiGraph;
 
-public class Link {
+public class Link implements Comparable<Link>{
 	
 	private Node relatedNode;
 	private int type;
@@ -28,6 +28,16 @@ public class Link {
 		super();
 		this.relatedNode = relatedNode;
 		this.lenght = lenght;
+	}
+
+	@Override
+	public int compareTo(Link o) {
+		if(this.lenght>=o.getLenght()) 
+		{
+			return -1;
+		}
+		
+		return 1;
 	}
 	
 

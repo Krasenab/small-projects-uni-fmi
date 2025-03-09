@@ -2,12 +2,24 @@ package fmi.Algo;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 
 import fmiGraph.Graph;
 import fmiGraph.Link;
 import fmiGraph.Node;
 
 public class UtilClass {
+	
+	
+	public static void sortLInksByLenght(Graph graph) {
+		
+		Collection<Node> values =  graph.getInsideMap().values();
+		for(Node n:values) 
+		{
+			n.getLinks().sort(null);
+		}
+		
+	}
 	
 	public static void rest(Graph graph) 
 	{

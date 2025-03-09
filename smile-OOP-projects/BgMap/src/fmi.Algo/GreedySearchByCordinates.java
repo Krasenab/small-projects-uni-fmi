@@ -65,7 +65,7 @@ public class GreedySearchByCordinates implements SearchInterfaces {
 			if(!l.getRelatedNode().isVisited() && !fakeQueue.contains(l.getRelatedNode())) 
 			{
 				l.getRelatedNode().setParentName(parent.getName()); 
-				fakeQueue.add(l.getRelatedNode());
+				fakeQueue.add(0,l.getRelatedNode());
 			}
 		}
 		for(Node node:fakeQueue) 

@@ -16,7 +16,8 @@ public class UtilClass {
    public static void sortLInksByDistance(Graph graph,String goalName) {
 		
 		Collection<Node> values =  graph.getInsideMap().values();
-		Comparator<Link> byDistance = (Link l1,Link l2) -> Double.compare(calculateDIstance(graph,l1.getRelatedNode().getName(),goalName),calculateDIstance(graph,l2.getRelatedNode().getName(),goalName));
+		Comparator<Link> byDistance = (Link l1,Link l2) -> Double.compare(calculateDIstance(graph,l2.getRelatedNode().getName(),goalName)
+				,calculateDIstance(graph,l1.getRelatedNode().getName(),goalName));
 		
 		for(Node n:values) 
 		{

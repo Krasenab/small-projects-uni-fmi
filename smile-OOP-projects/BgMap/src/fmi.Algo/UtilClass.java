@@ -2,6 +2,7 @@ package fmi.Algo;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Map;
 
 import fmiGraph.Graph;
@@ -10,6 +11,30 @@ import fmiGraph.Node;
 
 public class UtilClass {
 	
+	
+	
+   public static void sortLInksByDistance(Graph graph,String goalName) {
+		
+		Collection<Node> values =  graph.getInsideMap().values();
+		Comparator<Link> byDistance = (Link l1,Link l2) -> Double.compare(calculateDIstance(graph,l1.getRelatedNode().getName(),goalName),calculateDIstance(graph,l2.getRelatedNode().getName(),goalName));
+		
+		for(Node n:values) 
+		{
+			n.getLinks().sort(byDistance);
+		}
+		
+	}
+   private static double  calculateDIstance(Graph graph,String currentName,String goalName) 
+   {
+	   Node currentN = graph.getNode(currentName);
+	   Node goalNode = graph.getNode(goalName);
+		   	   
+	   return Math.sqrt(Math.pow(currentN.getX()-goalNode.getY(), 2) + Math.pow(currentN.getX()-goalNode.getY(), 2) );
+   }
+   
+   
+   
+   
 	
 	public static void sortLInksByLenght(Graph graph) {
 		
